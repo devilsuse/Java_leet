@@ -34,7 +34,11 @@ Constraints:
 1 <= weights[i] <= 109
  */
 
+import java.util.Arrays;
+
 public class _2551_Put_Marbles_in_Bags {
+
+    // Best explanation https://www.youtube.com/watch?v=RyJpH8cghrE
 
     //MINE
     public long putMarbles(int[] weights, int k) {
