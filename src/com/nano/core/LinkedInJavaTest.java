@@ -13,6 +13,7 @@ public class LinkedInJavaTest {
     }
 
     public static void que1(){
+        Linked
         List<String> song = Arrays.asList("humble","element","dns");
         Function<String,String> capitalize = str->str.toUpperCase();
         song.stream().map(capitalize).forEach(System.out::println);

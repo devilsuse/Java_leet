@@ -7,6 +7,8 @@ public class OptionalExeption {
     public static void main(String[] args) {
         try{
            Optional<Integer> numOp = Optional.of(num(1));
+        }catch (Exception e){
+
         }
     }
 

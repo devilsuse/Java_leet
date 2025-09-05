@@ -1,3 +1,4 @@
+/*
 package com.nano.stream;
 
 import lombok.AllArgsConstructor;
@@ -56,9 +57,11 @@ public class NestedForLoopReplace {
                 {
                     Location l = Location.builder()
                         .id(location.getId()).build();
-                   /* Map<String, Address> map = location.getAddresses()
+                   */
+/* Map<String, Address> map = location.getAddresses()
                             .stream()
-                            .collect(Collectors.toMap(Address::getType, address->address));*/
+                            .collect(Collectors.toMap(Address::getType, address->address));*//*
+
                     for(Address a : location.getAddresses()) {
                         if(a.getType().equals("primary"))
                             l.setPrimaryAddress(a);
@@ -87,4 +90,4 @@ class Location{
     private Address primaryAddress;
     private Address billingAddress;
 
-}
+}*/
