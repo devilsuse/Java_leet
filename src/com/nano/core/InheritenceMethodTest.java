@@ -1,9 +1,12 @@
 package com.nano.core;
 
-public class OverrideSynchronisedMethod {
-    SuperClass su = new SubClass();
-    //SuperClass.show();
-    //SubClass.show();
+public class InheritenceMethodTest {
+    public static void main(String[] args) {
+        SuperClass su = new SubClass();
+        SuperClass.show();
+        SubClass.show();
+    }
+
 }
 
 class SuperClass{
@@ -27,22 +30,26 @@ class SuperClass{
     }
 }
 
-class SubClass extends SuperClass{
-    public void sync(){
+class SubClass extends SuperClass {
+    public void sync() {
     }
 
-    public synchronized void unSync(){
+    public synchronized void unSync() {
     }
 
     //cannot reduce visibility of method being overriden
-  //  private void publicMethod(){
-  //  }
+    //  private void publicMethod(){
+    //  }
 
     // increasing visibility is fine
-    public void protectedMethod(){
+    public void protectedMethod() {
     }
 
-    Integer getValue() { return 20; } // ✅ allowed (Integer is a subtype of Number)
+    Integer getValue() {
+        return 20;
+    } // ✅ allowed (Integer is a subtype of Number)
+
     static void show() { // hides Parent.show()
         System.out.println("Child static");
+    }
 }

@@ -2,6 +2,7 @@ package com.nano.stream;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamDemo {
@@ -29,5 +30,6 @@ public class StreamDemo {
         Stream<Integer> stream3 = Stream.generate(() -> 1);
         // 2) Using iterate() method on Stream
         Stream<Integer> stream4 = Stream.iterate(1, x -> x+ 1);
+        Collectors.toList();
     }
  }
