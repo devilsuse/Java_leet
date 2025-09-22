@@ -1,6 +1,6 @@
 package com.nano.core;
 
-//Was Aksed in 73Strings
+//Was Asked in 73Strings
 public class OddEvenInTwoThread {
 
     private static final Object lock = new Object();
