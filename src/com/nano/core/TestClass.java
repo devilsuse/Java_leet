@@ -10,6 +10,7 @@ public class TestClass {
             '6', "mno", '7', "pqrs", '8', "tuv", '9', "wxyz");
 
     public static void main(String[] args) {
+        //Arrays.binarySearch();
         Stream<String> stream;
         HashMap<String, String> m;
         Hashtable<?,?> ht;
