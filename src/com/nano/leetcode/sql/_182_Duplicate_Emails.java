@@ -130,6 +130,34 @@ The COUNT(email) OVER (PARTITION BY email) function counts the number of rows fo
 
 The outer query (or the CTE/subquery result) then filters for rows where email_count is greater than 1, indicating a duplicate, and uses DISTINCT to show each duplicate email only once.
 
-By the way, to unlock the full functionality of all Apps, enable Gemini Apps Activity.
+Pandas:
+import pandas as pd
+
+def duplicate_emails(person: pd.DataFrame) -> pd.DataFrame:
+    """
+    Finds all duplicate emails in the Person DataFrame,
+    returning a DataFrame with a single column 'Email'.
+    """
+
+    # 1. Group by 'email' and count the occurrences.
+    # The 'size()' method is often faster than value_counts()
+    # when following up with a filter based on the count.
+    counts = person.groupby('email').size()
+
+    # 2. Filter the counts to find emails with count > 1.
+    duplicate_series = counts[counts > 1]
+
+    # 3. The index of the resulting Series contains the duplicate emails.
+    # Convert this index to a DataFrame with the *exact* required column name: 'Email'.
+    # Resetting the index before converting to a DataFrame is a clean way
+    # to move the email addresses from the index to a column.
+
+    # Use the index directly and name the column:
+    duplicate_emails_index = duplicate_series.index
+
+    # Crucial step: Create the final DataFrame with the correct column name 'Email'
+    result_df = pd.DataFrame({'Email': duplicate_emails_index})
+
+    return result_df
      */
 }
