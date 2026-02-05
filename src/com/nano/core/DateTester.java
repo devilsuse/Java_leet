@@ -37,6 +37,6 @@ public class DateTester {
             public Locale[] getAvailableLocales() {
                 return new Locale[0];
             }
-        }
+        };
     }
 }
