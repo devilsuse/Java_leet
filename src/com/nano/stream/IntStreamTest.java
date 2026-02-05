@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 public class IntStreamTest {
 
-    record (int a, int b){}
+    record A(int a, int b){}
     public static void main(String[] args) {
         IntStream s = IntStream.of(1,10);
 
