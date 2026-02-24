@@ -9,6 +9,7 @@ public class URLShortner {
     public static void main(String[] args) {
         String base62 = getBase62From10(1223334444);
         System.out.println(base62);
+       // System.out.println(getBase10From62("buW9kS"));
     }
 
     public static final String getBase62From10(final long seed)

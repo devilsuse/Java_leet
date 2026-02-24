@@ -8,13 +8,13 @@ public class CastExceptionNotDetectedAtCompiletime {
 }
 
 interface Polygon{}
-final class Rectangle {//implements Polygon{
+class Rectangle implements Polygon{
     public Rectangle(){
         System.out.println("works !");
     }
 }
 
-//class ABC extends Rectangle implements Polygon{
-//}
+class ABC extends Rectangle implements Polygon{
+}
 
 
